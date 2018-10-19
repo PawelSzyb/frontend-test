@@ -11,7 +11,7 @@ function Quotation() {
         illum maxime saepe pariatur porro perspiciatis eum doloremque nemo
         culpa.
       </p>
-      <div class="blockquote-footer">
+      <div className="blockquote-footer">
         Someone famous in <cite title="Source Title">Source Title</cite>
       </div>
     </div>
