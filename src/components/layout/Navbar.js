@@ -1,6 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 
+import "./Navbar.scss";
+
 function Navbar() {
   return (
     <ul className="nav bg-info justify-content-end">
