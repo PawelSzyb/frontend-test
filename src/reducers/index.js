@@ -8,7 +8,7 @@ export default function(state = initialState, action) {
       return {
         ...state,
         gallery: JSON.parse(
-          `${action.payload.substring(14, action.payload.length - 1)}`
+          `${action.payload.substring(15, action.payload.length - 1)}`
         )
       };
     default:

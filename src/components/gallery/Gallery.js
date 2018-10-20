@@ -13,7 +13,8 @@ export class Gallery extends Component {
   }
   componentWillReceiveProps(nextProps) {
     if (nextProps.gallery) {
-      this.setState({ results: nextProps.gallery.photos.photo });
+      const results = nextProps.gallery.items.slice(0, 9);
+      this.setState({ results });
     }
   }
   render() {
@@ -22,12 +23,7 @@ export class Gallery extends Component {
       <div className="gallery-wrapper ">
         {results !== undefined && Object.keys(results).length > 0
           ? results.map(photo => (
-              <GalleryItem
-                key={photo.id}
-                url={`https://farm${photo.farm}.staticflickr.com/${
-                  photo.server
-                }/${photo.id}_${photo.secret}.jpg`}
-              />
+              <GalleryItem key={photo.date_taken} url={photo.media.m} />
             ))
           : null}
       </div>

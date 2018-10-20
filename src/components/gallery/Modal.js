@@ -11,7 +11,7 @@ function Modal(props) {
             <img
               className="modal-img"
               src={props.url}
-              alt="Modal image of Marilyn Monroe"
+              alt="Modal of Marilyn Monroe"
             />
           </div>
           <div className="modal-footer">
