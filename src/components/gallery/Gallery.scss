@@ -1,3 +1,31 @@
 .gallery-wrapper {
   margin: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 10;
+}
+
+.modal-dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  & .modal-content {
+    min-width: 250px;
+    width: auto;
+  }
+  & .modal-img {
+    width: 100%;
+  }
 }

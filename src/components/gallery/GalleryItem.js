@@ -1,15 +1,30 @@
-import React from "react";
+import React, { Component } from "react";
+import Modal from "./Modal";
 
 import "./Gallery.scss";
 
-function GalleryItem(props) {
-  return (
-    <img
-      className="img col-12 col-sm-6 col-md-4 col-lg-4 col-xl-3 rounded img-thumbnail "
-      src={props.url}
-      alt="Marilyn Monroe"
-    />
-  );
+export class GalleryItem extends Component {
+  state = {
+    modalOpen: false
+  };
+  onClickHandle = () => {
+    this.setState({ modalOpen: !this.state.modalOpen });
+  };
+  render() {
+    return (
+      <>
+        <img
+          className="gallery-img rounded img-thumbnail "
+          src={this.props.url}
+          alt="Marilyn Monroe"
+          onClick={this.onClickHandle}
+        />
+        {this.state.modalOpen ? (
+          <Modal url={this.props.url} onModalClose={this.onClickHandle} />
+        ) : null}
+      </>
+    );
+  }
 }
 
 export default GalleryItem;

@@ -19,7 +19,7 @@ export class Gallery extends Component {
   render() {
     const { results } = this.state;
     return (
-      <div className="gallery-wrapper row">
+      <div className="gallery-wrapper ">
         {results !== undefined && Object.keys(results).length > 0
           ? results.map(photo => (
               <GalleryItem
